@@ -14,9 +14,12 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
+from streamlit_modal import Modal
+
+from api_key import my_api_key
+from ChatClient import ChatClient
 
 LOGGER = get_logger(__name__)
-
 
 def run():
     st.set_page_config(
@@ -24,9 +27,13 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    if "client" not in st.session_state:
+      chat_client = ChatClient(my_api_key())
+      st.session_state.client = chat_client
+    else:
+      chat_client = st.session_state.client
 
-    st.sidebar.success("Select a demo above.")
+    st.write("# Welcome to Streamlit! 👋")
 
     st.markdown(
         """
@@ -49,3 +56,6 @@ def run():
 
 if __name__ == "__main__":
     run()
+
+
+    ##use st.snow for celebration?? or st.balloons
