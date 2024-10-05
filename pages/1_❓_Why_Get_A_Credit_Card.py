@@ -49,7 +49,7 @@ st.sidebar.header("Why Get A Credit Card?")
 url = "https://www.annualcreditreport.com/index.action"
 
 st.write(
-    """
+    f"""
     ##### To answer this question, we first have to explain what a **credit history** is.
 
     The number of credit cards you have? Do you pay your credit card statements on time? 
@@ -63,11 +63,9 @@ st.write(
     gotten a loan. 
 
     Your credit score is a number ranges from 300 to 850, with the 300s being “bad” credit and 800s being “excellent” credit. 
-    """)
-st.markdown(
-    """
+
     ##### FUN FACT: 
-    By law, you can get a free credit report from each credit bureau from AnnualCreditReport.com (https://www.annualcreditreport.com/index.action)
+    By law, you can get a free credit report from each credit bureau from [AnnualCreditReport.com]({url})
 
     ##### Having a good credit history and score can help out in a variety of ways: 
     - You could get lower interest rates on loans (like mortgages and auto loans) 
@@ -76,6 +74,43 @@ st.markdown(
     """
 )
 
+st.divider()
+
+st.markdown("### Sample Quiz")
+
+# Question 1
+st.write("##### What is the credit score range?")
+options1 = ["Select an answer", "300-800", "300-850", "200-800", "400-600"]
+answer1 = st.radio("Choose an option:", options1)
+
+if answer1 == "300-850":
+    st.success("Correct!")
+elif answer1 != "Select an answer":
+    st.error("Incorrect. The correct answer is 300-850.")
+
+# Question 2
+st.write("##### What does a credit history NOT include?")
+options2 = ["Select an answer", "How many credit cards you have", "How often / when you have paid (your credit card)", "Personal income", "Loan history"]
+answer2 = st.radio("Choose an option:", options2, key="q2")
+
+if answer2 == "Personal income":
+    st.success("Correct!")
+elif answer2 != "Select an answer":
+    st.error("Incorrect. The correct answer is Personal income.")
+
+st.divider()
+
+st.write(
+    f"""
+    ##### Sources: 
+    [What Is a Credit History? Impact on Scores and Credit Report, Investopedia](https://www.investopedia.com/terms/c/credit-history.asp)
+    
+    [Your Credit History, Consumer.gov](https://consumer.gov/credit-loans-debt/your-credit-history)
+
+    [6 Reasons You Want a Good Credit Score, Experian](https://www.experian.com/blogs/ask-experian/why-would-you-want-a-good-credit-score/)
+
+    """
+)
 
 # plotting_demo()
 

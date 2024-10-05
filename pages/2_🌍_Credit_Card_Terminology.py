@@ -113,6 +113,11 @@ st.write(
     ###### The world of credit cards is filled with jargon that can be confusing. 
     ##### Here are some common terms you should know:
 
+    """
+)
+
+st.write(
+    """
     #### Credit Limit
     A credit limit is the maximum amount of money a lender will allow a borrower to spend using a credit card or revolving line of credit.
 
@@ -124,7 +129,12 @@ st.write(
 
     #### Credit Card Statement
     A credit card statement is a summary of how you've used your credit card for a billing period.
+""")
 
+st.divider()
+
+st.write(
+    """
     #### Credit Card Payment
     A credit card payment is a payment made by a credit card holder toward a credit card account.
 
@@ -137,7 +147,11 @@ st.write(
     #### Interest Rate
     An interest rate is the amount of interest due per period, as a proportion of the amount lent, deposited, or borrowed.
     Refers to how much the credit card company charges you for borrowing money (and is related to the APR).
+    """)
+st.divider()
 
+st.write(
+    """
     #### Credit Score
     A credit score is a numerical expression based on a level analysis of a person's credit files, to represent the creditworthiness of an individual.
     Scores range from 300 to 850 with the 300s being “bad” credit and 800s being “excellent” credit.
@@ -158,13 +172,78 @@ st.write(
     Credit card fraud is a wide-ranging term for theft and fraud committed using or involving a payment card, such as a credit card or debit card, as a fraudulent source of funds in a transaction.
 
     #### Credit Card APR
-    The annual percentage rate (APR) on a credit card is the interest rate charged on outstanding credit card balances.
+    If you borrow money through your credit card, the APR represents the total annual cost of borrowing money as it includes the 
+    interest rate of borrowing and any other fees. However, there are two types of APR’s: fixed APR and variable APR, 
+    where a fixed APR remains the same while a variable APR is subject to change. 
+    """
+    )
 
+st.divider()
+
+st.write(
+    """
     #### Credit Card Benefits
     Credit card benefits are the perks or advantages that come with using a credit card.
 
     #### Credit Card Rewards
     Credit card rewards are points, miles, or cash back you earn for making purchases with a credit card.
+
+    #### Balance Transfer
+    Refers to when you move some of your credit card debt to another card, (which can be subject to fees!)
+
+    #### Cash Advance
+    A cash advance is a service provided by credit card issuers that allows cardholders to withdraw a certain amount of cash. 
+    Note that these withdrawals can be subject to high interest rates and other fees!  
+    """
+)
+
+st.divider()
+
+st.markdown("### Sample Quiz")
+
+# Question 1
+st.write("##### What does this definition refer to: **“When you take out money from your credit card**?")
+options1 = ["Select an answer", "APR", "Credit Score", "Interest Rate", "Cash Advance"]
+answer1 = st.radio("Choose an option:", options1)
+
+if answer1 == "Cash Advance":
+    st.success("Correct!")
+elif answer1 != "Select an answer":
+    st.error("Incorrect. The correct answer is Cash Advance.")
+
+# Question 2
+st.write("##### What does this definition refer to: **“The maximum credit you can use on your credit card**?")
+options2 = ["Select an answer", "Credit Limit", "Credit Score", "Credit History", "Annual Fee"]
+answer2 = st.radio("Choose an option:", options2, key="q2")
+
+if answer2 == "Credit Limit":
+    st.success("Correct!")
+elif answer2 != "Select an answer":
+    st.error("Incorrect. The correct answer is Credit Limit.")
+
+# Question 3
+st.write("##### What does this definition refer to: **“The total annual cost of borrowing money from your card**?")
+option3 = ["Select an answer", "APR", "Credit Score", "Interest Rate", "Balance Transfer"]
+answer3 = st.radio("Choose an option:", options2, key="q3")
+
+if answer3 == "APR":
+    st.success("Correct!")
+elif answer3 != "Select an answer":
+    st.error("Incorrect. The correct answer is APR.")
+
+st.divider()
+
+st.write(
+    f"""
+    ##### Sources: 
+    [Credit Card Key Terms, CFPB](https://www.consumerfinance.gov/consumer-tools/credit-cards/answers/key-terms/)
+    
+    [Your Credit History, Consumer.gov](https://consumer.gov/credit-loans-debt/your-credit-history)
+
+    [What Is an APR and How Does It Work?, Experian](https://www.experian.com/blogs/ask-experian/what-is-apr/)
+
+    [25 key terms everyone with a credit card should know, CNBC](https://www.cnbc.com/select/common-credit-card-terms/)
+
     """
 )
 
