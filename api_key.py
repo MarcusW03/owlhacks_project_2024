@@ -1,2 +1,0 @@
-def my_api_key():
-    return "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"
