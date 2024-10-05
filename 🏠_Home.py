@@ -23,10 +23,15 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
+        page_title="Credit Owl",
+        page_icon="🦉",
     )
 
+<<<<<<< HEAD:🏠_Home.py
+    st.write("# Welcome to Credit Owl! 🦉")
+
+    st.sidebar.success("Select a learning module above.")
+=======
     if "client" not in st.session_state:
       chat_client = ChatClient(my_api_key())
       st.session_state.client = chat_client
@@ -34,13 +39,15 @@ def run():
       chat_client = st.session_state.client
 
     st.write("# Welcome to Streamlit! 👋")
+>>>>>>> main:Home.py
 
     st.markdown(
         """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
+        Streamlit is an online learning platform for financial literacy built specifically for
+        high schools.
+        
+        **👈 Select a module from the sidebar** to start learning about
+        the world of credit!
         ### Want to learn more?
         - Check out [streamlit.io](https://streamlit.io)
         - Jump into our [documentation](https://docs.streamlit.io)

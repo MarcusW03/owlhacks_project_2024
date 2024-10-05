@@ -17,7 +17,7 @@ import inspect
 import textwrap
 import pandas as pd
 import pydeck as pdk
-from utils import show_code
+# from utils import show_code
 
 
 from urllib.error import URLError
@@ -105,15 +105,69 @@ def mapping_demo():
         )
 
 
-st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
-st.markdown("# Mapping Demo")
-st.sidebar.header("Mapping Demo")
+st.set_page_config(page_title="Credit Card Terminology", page_icon="🌍")
+st.markdown("# Credit Card Terminology")
+st.sidebar.header("Credit Card Terminology")
 st.write(
-    """This demo shows how to use
-[`st.pydeck_chart`](https://docs.streamlit.io/library/api-reference/charts/st.pydeck_chart)
-to display geospatial data."""
+    """
+    ###### The world of credit cards is filled with jargon that can be confusing. 
+    ##### Here are some common terms you should know:
+
+    #### Credit Limit
+    A credit limit is the maximum amount of money a lender will allow a borrower to spend using a credit card or revolving line of credit.
+
+     #### Credit Card Balance
+    A credit card balance is the amount of money owed on a credit card account.
+
+    #### Credit Utilization
+    Credit utilization is the ratio of a borrower's total credit card balances to their total credit card limits.
+
+    #### Credit Card Statement
+    A credit card statement is a summary of how you've used your credit card for a billing period.
+
+    #### Credit Card Payment
+    A credit card payment is a payment made by a credit card holder toward a credit card account.
+
+     #### Minimum Payment
+    The minimum payment is the smallest amount of a credit card bill that a credit card holder must pay each month to keep the account in good standing.
+
+    #### Credit Card Debt
+    Credit card debt is a type of unsecured liability that is incurred through revolving credit card loans.
+    
+    #### Interest Rate
+    An interest rate is the amount of interest due per period, as a proportion of the amount lent, deposited, or borrowed.
+    Refers to how much the credit card company charges you for borrowing money (and is related to the APR).
+
+    #### Credit Score
+    A credit score is a numerical expression based on a level analysis of a person's credit files, to represent the creditworthiness of an individual.
+    Scores range from 300 to 850 with the 300s being “bad” credit and 800s being “excellent” credit.
+    
+    #### Credit Report
+    A credit report is a detailed report of an individual's credit history prepared by a credit bureau.
+
+    #### Credit History
+    Credit history is a record of a borrower's responsible repayment of debts including any loans you have/ have had, number of credit cards, and your credit card payment history.
+
+    #### Credit Inquiry
+    A credit inquiry is a request by a legitimate business to check the credit history of a potential customer.
+
+    #### Credit Freeze
+    A credit freeze is a security measure that restricts access to your credit report.
+
+    #### Credit Card Fraud
+    Credit card fraud is a wide-ranging term for theft and fraud committed using or involving a payment card, such as a credit card or debit card, as a fraudulent source of funds in a transaction.
+
+    #### Credit Card APR
+    The annual percentage rate (APR) on a credit card is the interest rate charged on outstanding credit card balances.
+
+    #### Credit Card Benefits
+    Credit card benefits are the perks or advantages that come with using a credit card.
+
+    #### Credit Card Rewards
+    Credit card rewards are points, miles, or cash back you earn for making purchases with a credit card.
+    """
 )
 
-mapping_demo()
+# mapping_demo()
 
-show_code(mapping_demo)
+# show_code(mapping_demo)
