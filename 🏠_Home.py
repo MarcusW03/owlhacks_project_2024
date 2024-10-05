@@ -14,6 +14,8 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
+import streamlit as st
+# import matplotlib.pyplot as plt
 
 from api_key import my_api_key
 from ChatClient import ChatClient
@@ -36,29 +38,54 @@ def run():
     else:
       chat_client = st.session_state.client
 
+    # # Data for the pie chart
+    # labels = ['Low-income college students with credit cards', 'College students with credit card debt']
+    # sizes = [32, 65]
+    # colors = ['#ff9999', '#66b3ff']
+    # explode = (0.1, 0)  # explode the 1st slice
+
+    # # Create the pie chart
+    # fig1, ax1 = plt.subplots()
+    # ax1.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%',
+    #         shadow=True, startangle=90)
+
+    # ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+    # # Display the pie chart in Streamlit
+    # st.pyplot(fig1)
+
+    # st.pyplot(fig1)
 
     st.markdown(
-        """
-        Fli-Credit is an online learning platform for financial literacy built specifically for
-        high schools.
-        
-        **👈 Select a module from the sidebar** to start learning about
-        the world of credit!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
+      """
+      Finances are tricky for everyone. As a team of current first-generation low-income college seniors, 
+      we understand this. It’s very daunting being the first in your family to try to build generational 
+      wealth all while having a midterm on Monday. And don’t get me started on the google search rabbit holes… 
 
+      To tackle this issue, **we want you to know you’re not alone.** You can set yourself up for financial success 
+      in high school by learning about credit cards and maybe even opening one. Credit cards should not be 
+      scary. They can come with many benefits if used **responsibly** and we hope that this website can empower 
+      you to see credit cards in a different light. 
+      
+      **👈 Select a module from the sidebar** to start learning about
+      the world of credit!
+      """
+    )
+    st.divider()
+
+    st.write(
+      f"""
+      ##### Sources: 
+      [What’s the average college student credit card debt? , National Debt Relief](https://www.nationaldebtrelief.com/blog/debt-guide/student-loan-debt/whats-the-average-college-student-credit-card-debt/#:~:text=A%20recent%20study%20by%20College,the%20most%20worry%20and%20concern)
+      
+      [What every college student needs to know about getting a first credit card, CNBC](https://www.cnbc.com/2024/10/01/what-every-college-student-needs-to-know-about-getting-a-credit-card.html#:~:text=According%20to%20student%20loan%20provider,and%20impart%20valuable%20financial%20lessons)
+
+      [College Student Credit Card Statistics, WalletHub](https://wallethub.com/edu/cc/credit-card-statistics-for-college-students/25535)
+
+      """
+  )
 
 if __name__ == "__main__":
     run()
-
 
     ##use st.snow for celebration?? or st.balloons
