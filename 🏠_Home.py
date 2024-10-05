@@ -17,6 +17,7 @@ from streamlit.logger import get_logger
 
 from api_key import my_api_key
 from ChatClient import ChatClient
+from css import css
 
 LOGGER = get_logger(__name__)
 
@@ -25,6 +26,7 @@ def run():
         page_title="Credit Owl",
         page_icon="🦉",
     )
+    st.markdown(css,unsafe_allow_html=True)
 
     st.write("# Welcome to Credit Owl! 🦉")
 

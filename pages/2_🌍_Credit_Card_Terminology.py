@@ -17,6 +17,7 @@ import inspect
 import textwrap
 import pandas as pd
 import pydeck as pdk
+from css import css
 # from utils import show_code
 
 
@@ -106,6 +107,7 @@ def mapping_demo():
 
 
 st.set_page_config(page_title="Credit Card Terminology", page_icon="🌍")
+st.markdown(css,unsafe_allow_html=True)
 st.markdown("# Credit Card Terminology")
 st.sidebar.header("Credit Card Terminology")
 st.write(

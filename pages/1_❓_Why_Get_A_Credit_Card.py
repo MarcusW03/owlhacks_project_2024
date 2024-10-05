@@ -17,6 +17,7 @@ import inspect
 import textwrap
 import time
 import numpy as np
+from css import css
 # from utils import show_code
 
 
@@ -43,6 +44,7 @@ def plotting_demo():
 
 
 st.set_page_config(page_title="Why Get A Credit Card?", page_icon="💳")
+st.markdown(css,unsafe_allow_html=True)
 st.markdown("# Why Get A Credit Card?")
 st.sidebar.header("Why Get A Credit Card?")
 
