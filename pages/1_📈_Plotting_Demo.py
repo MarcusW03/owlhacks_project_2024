@@ -17,7 +17,7 @@ import inspect
 import textwrap
 import time
 import numpy as np
-from utils import show_code
+# from utils import show_code
 
 
 def plotting_demo():
@@ -42,7 +42,7 @@ def plotting_demo():
     st.button("Re-run")
 
 
-st.set_page_config(page_title="Plotting Demo", page_icon="📈")
+st.set_page_config(page_title="Credit Card Basics", page_icon="💳")
 st.markdown("# Plotting Demo")
 st.sidebar.header("Plotting Demo")
 st.write(
