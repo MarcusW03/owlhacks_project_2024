@@ -87,6 +87,7 @@ answer1 = st.radio("Choose an option:", options1)
 
 if answer1 == "300-850":
     st.success("Correct!")
+    st.balloons()
 elif answer1 != "Select an answer":
     st.error("Incorrect. The correct answer is 300-850.")
 
@@ -97,6 +98,7 @@ answer2 = st.radio("Choose an option:", options2, key="q2")
 
 if answer2 == "Personal income":
     st.success("Correct!")
+    st.balloons()
 elif answer2 != "Select an answer":
     st.error("Incorrect. The correct answer is Personal income.")
 

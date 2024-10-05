@@ -36,6 +36,7 @@ answer1 = st.radio("Choose an option:", options1)
 
 if answer1 == "True":
     st.success("Correct!")
+    st.balloons()
 elif answer1 != "Select an answer":
     st.error("Incorrect. The correct answer is True.")
 
@@ -46,6 +47,7 @@ answer2 = st.radio("Choose an option:", options2, key="q2")
 
 if answer2 == "False":
     st.success("Correct!")
+    st.balloons()
 elif answer2 != "Select an answer":
     st.error("Incorrect. The correct answer is False.")
 
