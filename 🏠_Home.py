@@ -14,7 +14,6 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
-from streamlit_modal import Modal
 
 from api_key import my_api_key
 from ChatClient import ChatClient
@@ -27,23 +26,20 @@ def run():
         page_icon="🦉",
     )
 
-<<<<<<< HEAD:🏠_Home.py
     st.write("# Welcome to Credit Owl! 🦉")
 
     st.sidebar.success("Select a learning module above.")
-=======
+
     if "client" not in st.session_state:
       chat_client = ChatClient(my_api_key())
       st.session_state.client = chat_client
     else:
       chat_client = st.session_state.client
 
-    st.write("# Welcome to Streamlit! 👋")
->>>>>>> main:Home.py
 
     st.markdown(
         """
-        Streamlit is an online learning platform for financial literacy built specifically for
+        Fli-Credit is an online learning platform for financial literacy built specifically for
         high schools.
         
         **👈 Select a module from the sidebar** to start learning about
