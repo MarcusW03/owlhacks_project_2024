@@ -1,4 +1,4 @@
-# owlhacks_project_2024
+# FLI-Credit
 Project for Temple University's Owlhacks Hackathon
 
 # Contributors
@@ -42,5 +42,5 @@ Running the app with Streamlit is super easy! With an activate environment and r
 ## Getting your own OpenAI Api Key
 To run the chatbot feature, then you will need an openai api key. Instructions can be found [here](https://platform.openai.com/api-keys).
 - ### Adding Api Key to Project
-  Add you Api Key to the .streamlit/secrets.toml file. Simply replace "Your personal API Key" with you own key. 
+  Add you Api Key to the .streamlit/secrets.toml file. Simply replace "Your Personal Key" with you own key. 
 
