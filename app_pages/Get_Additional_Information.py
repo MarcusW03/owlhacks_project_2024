@@ -1,9 +1,9 @@
 import streamlit as st
-from api_key import my_api_key
 from ChatClient import ChatClient
 from css import css
 
 content_mod = "You are a helpful assistant, answering questions only about financial advise or credit card information. Respond thoughtfully and with plenty of information. For all other questions that are out of the scope of these two sectors, please respond politely that the question is out of your scope. In this case, do not answer it. Here is the question: "
+API_KEY = st.secrets["API_KEY"]
 
 def chatbot():
 
@@ -11,7 +11,7 @@ def chatbot():
         chat_client = st.session_state.client
     else:
         try:
-            chat_client = ChatClient(my_api_key())
+            chat_client = ChatClient(API_KEY)
         except Exception as e:
             st.write("Chat Features are currently unavailable")
             return

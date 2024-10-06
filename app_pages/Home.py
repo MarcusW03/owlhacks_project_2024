@@ -15,7 +15,6 @@
 import streamlit as st
 import streamlit as st
 import plotly.express as px
-from api_key import my_api_key
 from ChatClient import ChatClient
 from css import css
 
