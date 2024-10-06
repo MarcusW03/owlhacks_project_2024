@@ -1,6 +1,4 @@
 import streamlit as st
-import time
-import numpy as np
 from css import css
 
 st.set_page_config(page_title="Types of Credit Cards", page_icon="📈")

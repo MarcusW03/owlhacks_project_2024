@@ -1,9 +1,8 @@
 import streamlit as st
-import time
-import numpy as np
+from css import css
 
 st.set_page_config(page_title="Using A Credit Card", page_icon="📈")
-
+st.markdown(css,unsafe_allow_html=True)
 st.markdown("# Using A Credit Card")
 st.sidebar.header("Using A Credit Card")
 st.write(

@@ -23,6 +23,20 @@ from css import css
 
 LOGGER = get_logger(__name__)
 
+pg = st.navigation([
+  #st.Page("app_pages/Home.py", title="Home", icon=":material/add_circle:"), 
+  st.Page("app_pages/Why_Get_A_Credit_Card.py", title="Why Get A Credit Card", icon=":material/add_circle:"), 
+  st.Page("app_pages/Credit_Card_Terminology.py", title="Credit Card Terminology", icon=":material/add_circle:"), 
+  st.Page("app_pages/Types_of_Credit_Cards.py", title="Types of Credit Cards", icon=":material/add_circle:"), 
+  st.Page("app_pages/Authorized_User.py", title="Authorized User", icon=":material/add_circle:"), 
+  st.Page("app_pages/Using_A_Credit_Card.py", title="Using A Credit Card", icon=":material/add_circle:"), 
+  st.Page("app_pages/Analyzing_Some_Credit_Cards.py", title="Analyzing a Credit Card", icon=":material/add_circle:"), 
+  st.Page("app_pages/Get_Additional_Information.py", title="Get Additional Information", icon=":material/add_circle:"), 
+
+])
+
+
+
 def run():
     st.set_page_config(
         page_title="Credit Owl",
@@ -88,6 +102,6 @@ def run():
   )
 
 if __name__ == "__main__":
-    run()
+    pg.run()
 
     ##use st.snow for celebration?? or st.balloons
