@@ -1,10 +1,11 @@
 import streamlit as st
 from css import css
 
+
 st.set_page_config(page_title="Types of Credit Cards", page_icon="📈")
+st.logo(image="./static/images/FLICredit_logo0.png", size="large", icon_image="./static/images/FLICredit_logo1.png")
 st.markdown(css,unsafe_allow_html=True)
 st.markdown("# Types of Credit Cards")
-st.sidebar.header("Types of Credit Cards")
 
 url = "https://www.capitalone.com/credit-cards/secured-mastercard/"
 st.write(

@@ -3,12 +3,18 @@ from api_key import my_api_key
 from ChatClient import ChatClient
 from css import css
 
+content_mod = "You are a helpful assistant, answering questions only about financial advise or credit card information. Respond thoughtfully and with plenty of information. For all other questions that are out of the scope of these two sectors, please respond politely that the question is out of your scope. In this case, do not answer it. Here is the question: "
+
 def chatbot():
 
     if "client" in st.session_state:
         chat_client = st.session_state.client
     else:
-        chat_client = ChatClient(my_api_key())
+        try:
+            chat_client = ChatClient(my_api_key())
+        except Exception as e:
+            st.write("Chat Features are currently unavailable")
+            return
         st.session_state.client = chat_client
 
     client = chat_client.get_client()
@@ -41,7 +47,7 @@ def chatbot():
                 stream = client.chat.completions.create(
                     model=ai_model,
                     messages=[
-                        {"role": m["role"], "content": m["content"]}
+                        {"role": m["role"], "content": (content_mod + m["content"])}
                         for m in st.session_state.messages
                     ],
                     stream=True,
@@ -54,7 +60,7 @@ def chatbot():
 st.set_page_config(page_title="AI Help", page_icon="🤖")
 st.markdown("# Get Additional Information from AI")
 st.markdown("*This content has been created by an AI language model and is intended to provide general information. While we strive to deliver accurate and reliable content, it may not always reflect the latest developments or expert opinions. The content should not be considered as professional or personalized advice. We encourage you to seek professional guidance and verify the information independently before making decisions based on this content.*")
-#st.sidebar.header("Chat with AI")
+st.logo(image="./static/images/FLICredit_logo0.png", size="large", icon_image="./static/images/FLICredit_logo1.png")
 st.markdown(css,unsafe_allow_html=True)
 
 chatbot()
