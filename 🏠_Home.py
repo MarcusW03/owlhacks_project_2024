@@ -15,6 +15,8 @@
 import streamlit as st
 from streamlit.logger import get_logger
 import streamlit as st
+import plotly.express as px
+import pandas as pd
 # import matplotlib.pyplot as plt
 
 from api_key import my_api_key
@@ -38,11 +40,16 @@ def run():
     else:
       chat_client = st.session_state.client
 
-    # # Data for the pie chart
-    # labels = ['Low-income college students with credit cards', 'College students with credit card debt']
-    # sizes = [32, 65]
-    # colors = ['#ff9999', '#66b3ff']
-    # explode = (0.1, 0)  # explode the 1st slice
+     # Data for the pie chart
+    #labels = ['Low-income college students with credit cards', 'College students with credit card debt']
+    #sizes = [32, 65]
+    colors = ['#ff9999', '#66b3ff']
+    explode = (0.1, 0)  # explode the 1st slice
+
+    #frame = pd.DataFrame(data=sizes, columns=labels)
+
+    figure = px.pie(names=["College students with credit card debt", "College students without credit card debt"], values=[52, 48], color=colors, hover_name=["College students with credit card debt", "College students without credit card debt"])
+    figure2 = px.pie(names=["Low-income college students with credit cards", "Low-income college students without credit cards"], values=[32, 68], color=colors, hover_name=["Low-income college students with credit cards", "Low-income college students without credit cards"]) ##ARe these values right?
 
     # # Create the pie chart
     # fig1, ax1 = plt.subplots()
@@ -55,6 +62,8 @@ def run():
     # st.pyplot(fig1)
 
     # st.pyplot(fig1)
+    st.plotly_chart(figure) ##Update position in doc
+    st.plotly_chart(figure2) ##Update position in doc
 
     st.markdown(
       """
