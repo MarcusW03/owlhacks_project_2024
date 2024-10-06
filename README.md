@@ -29,12 +29,18 @@ Running this project locally requires a virtual environment. If you have one gre
 ## Setting up an environment
 - ### Using Python
   You can create a python virtual environment by running 'python -m venv .venv' in your project directory.
-  You can activate the environment by running 'source ./.venv/bin/activate'
+  You can activate the environment by running 'source ./.venv/bin/activate'.
 - ### Using Conda (pre-requisite having conda installed)
-  You can create a conda virtual environment by running 'conda create --name env'
+  You can create a conda virtual environment by running 'conda create --name env'.
   You can activate the envionment by running 'conda activate env'
 - ### Installing Requirements
   Once you have a running environment, you can run 'pip install -r requirements.txt' to install the required libraries.
 
 ## Running The Streamlit App
 Running the app with Streamlit is super easy! With an activate environment and required libraries installed, you can run 'streamlit run app.py'
+
+## Getting your own OpenAI Api Key
+To run the chatbot feature, then you will need an openai api key. Instructions can be found [here](https://platform.openai.com/api-keys).
+- ### Adding Api Key to Project
+  Add you Api Key to the .streamlit/secrets.toml file. Simply replace "Your personal API Key" with you own key. 
+
