@@ -1,6 +1,7 @@
 import streamlit as st
 from css import css
 
+
 st.set_page_config(page_title="Using A Credit Card", page_icon="📈")
 st.markdown(css,unsafe_allow_html=True)
 st.markdown("# Using A Credit Card")
