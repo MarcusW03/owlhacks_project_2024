@@ -22,3 +22,19 @@ One of the standout features is our chatbot, which provides real-time answers to
 
 # How We Built FLI Credit
 We used Streamlit for both the frontend and backend development of the platform. Streamlit's flexibility allowed us to quickly iterate on our UI and provide a seamless user experience. For the chatbot feature, we integrated OpenAI's API, enabling us to create an intelligent assistant that can answer user queries based on their specific needs. The chatbot leverages the vast knowledge base of OpenAI to offer quick responses to any credit-related questions, giving users a personalized and interactive experience. Throughout the build, we focused on creating an intuitive interface that’s easy to navigate and designed with accessibility in mind—using clear fonts, readable text sizes, and color schemes that meet accessibility standards.
+
+# Getting Started with This Project
+Running this project locally requires a virtual environment. If you have one great, just run 'pip install -r requirements.txt' inside your environment. 
+
+## Setting up an environment
+- ### Using Python
+  You can create a python virtual environment by running 'python -m venv .venv' in your project directory.
+  You can activate the environment by running 'source ./.venv/bin/activate'
+- ### Using Conda (pre-requisite having conda installed)
+  You can create a conda virtual environment by running 'conda create --name env'
+  You can activate the envionment by running 'conda activate env'
+- ### Installing Requirements
+  Once you have a running environment, you can run 'pip install -r requirements.txt' to install the required libraries.
+
+## Running The Streamlit App
+Running the app with Streamlit is super easy! With an activate environment and required libraries installed, you can run 'streamlit run app.py'
