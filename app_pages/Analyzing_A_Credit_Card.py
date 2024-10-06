@@ -2,10 +2,10 @@ import streamlit as st
 from css import css
 
 def run():
-    st.set_page_config(page_title="Analyzing Examples Credit Cards", page_icon="📈")
+    st.set_page_config(page_title="Analyzing An Example of A Credit Card", page_icon="📈")
     st.logo(image="./static/images/FLICredit_logo0.png", size="large", icon_image="./static/images/FLICredit_logo1.png")
     st.markdown(css,unsafe_allow_html=True)
-    st.markdown("# Analyzing Examples Credit Cards")
+    st.markdown("# Analyzing An Example of A Credit Card")
     st.write(
         """
         We understand that this information is a lot (take a deep breath)! So, in addition to the 
