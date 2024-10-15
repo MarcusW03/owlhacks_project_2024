@@ -6,7 +6,7 @@ css = """
                 margin-left: 3rem;
             }
             
-            .stAppToolbar {display:none;}
+            
             footer {visibility: hidden;}
             #stDecoration {display:none;}
         </style>

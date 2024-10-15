@@ -3,7 +3,9 @@ from api_key import my_api_key
 from ChatClient import ChatClient
 from css import css
 
-content_mod = "You are a helpful assistant, answering questions only about financial advise or credit card information. Respond thoughtfully and with plenty of information. For all other questions that are out of the scope of these two sectors, please respond politely that the question is out of your scope. In this case, do not answer it. Here is the question: "
+#content_mod = "You are a helpful assistant, answering questions only about financial advise or credit card information. Respond thoughtfully and with plenty of information. For all other questions that are out of the scope of these two sectors, please respond politely that the question is out of your scope. In this case, do not answer it. Here is the question: "
+content_mod = "You are a helpful assistant, only answering questions about pokemon, or responding with 'Image: <requested image info>' if the user requests an image relating to pokemon. Do not answer any other questions that don't explicitly request information about pokemon. For all other questions that are out of the scope of these two sectors, please respond politely that the question is out of your scope. Here is the question: "
+
 
 def chatbot():
 
@@ -34,7 +36,7 @@ def chatbot():
             st.markdown(message["content"])
 
     # Accept user input
-    if prompt := st.chat_input("Need additional information?"):
+    if prompt := st.chat_input("Need additional information?"): ###CAN CHANGE
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
         # Display user message in chat message container
@@ -50,9 +52,15 @@ def chatbot():
                         {"role": m["role"], "content": (content_mod + m["content"])}
                         for m in st.session_state.messages
                     ],
-                    stream=True,
-                )
-                response = st.write_stream(stream)
+                    stream=False,
+                ).choices[0].message.content
+                if stream.startswith("Image:"):
+                    pass
+                    ##Use Google API 
+                    ##description = stream[6:]
+                    ##st.markdown("[description](link_returned_by_google)")
+                    ##else
+                response = st.write(stream)
             st.session_state.messages.append({"role": "assistant", "content": response})
         except Exception as e:
             st.toast("Whoops, there seems to be an error with the chatbot\n\n" + str(e))

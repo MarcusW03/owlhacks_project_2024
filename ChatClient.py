@@ -3,12 +3,12 @@ from openai import OpenAI
 
 class ChatClient():
 
-    def __init__(self, api_key):
+    def __init__(self, api_key, model="gpt-4-turbo", description="openai_model"):
     
         self.client = OpenAI(api_key=api_key)
 
-        self.model = "gpt-3.5-turbo"
-        st.session_state["openai_model"] = self.model
+        self.model = model
+        st.session_state[description] = self.model
 
         st.session_state.messages = []
     
