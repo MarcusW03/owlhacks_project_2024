@@ -1,5 +1,5 @@
 # FLI-Credit
-Project for Temple University's Owlhacks Hackathon
+Project for Temple University's Owlhacks Hackathon. \
 See Project Posting here: [Devpost](https://devpost.com/software/fli-credit)
 
 # Contributors
